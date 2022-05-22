@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="NetworkService.Views.MeasurementGraph"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NetworkService.Views"
+             xmlns:viewModel="clr-namespace:NetworkService.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.DataContext>
+        <viewModel:MeasurementGraphViewModel/>
+    </UserControl.DataContext>
+
+    <Canvas Background ="White" Height="700" Width="800">
+
+        <Button Content="GENERISI" Command="{Binding ShowGraphCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Height="34" Canvas.Left="151" Canvas.Top="29"/>
+        <ComboBox x:Name="cbID" ItemsSource="{Binding TemperatureReaktora}" DisplayMemberPath="Id" SelectedItem="{Binding SelectedTemp}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="143" Height="34" Canvas.Left="554" Canvas.Top="29"/>
+
+        <Canvas Width="800" Height="502" Canvas.Top="68">
+            <Label Content="Vrednosti Entiteta" FontWeight="Bold" Canvas.Left="277" Canvas.Top="10" FontSize="30"/>
+            <Line X1="100" Y1="440" X2="750" Y2="440" Stroke="LightGray" StrokeThickness="4"/>
+            <Line X1="100" Y1="355" X2="750" Y2="355" Stroke="LightGray" StrokeThickness="4"/>
+            <Line X1="100" Y1="270" X2="750" Y2="270" Stroke="LightGray" StrokeThickness="4"/>
+            <Line X1="100" Y1="185" X2="750" Y2="185" Stroke="LightGray" StrokeThickness="4"/>
+            <Line X1="100" Y1="100" X2="750" Y2="100" Stroke="LightGray" StrokeThickness="4"/>
+            <Label Content="{Binding SelectedMerenje.Entiteti[0].SkracenDatum}" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Bold" Canvas.Top="459" Width="49" Canvas.Left="118" Height="35"/>
+            <Label Content="{Binding SelectedMerenje.Entiteti[1].SkracenDatum}" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Bold" Canvas.Top="459" Width="49" Canvas.Left="258" Height="35"/>
+            <Label Content="{Binding SelectedMerenje.Entiteti[2].SkracenDatum}" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Bold" Canvas.Top="459" Width="49" Canvas.Left="398" Height="35"/>
+            <Label Content="{Binding SelectedMerenje.Entiteti[3].SkracenDatum}" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Bold" Canvas.Top="459" Width="49" Canvas.Left="538" Height="35"/>
+            <Label Content="{Binding SelectedMerenje.Entiteti[4].SkracenDatum}" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Bold" Canvas.Top="459" Width="49" Canvas.Left="678" Height="35"/>
+            <Label Content="0" HorizontalContentAlignment="Center" FontSize="25" Canvas.Top="416" Width="50" Canvas.Left="29"/>
+            <Label Content="100" HorizontalContentAlignment="Center" FontSize="25" Canvas.Top="331" Width="50" Canvas.Left="29"/>
+            <Label Content="200" HorizontalContentAlignment="Center" FontSize="25" Canvas.Top="246" Width="50" Canvas.Left="29"/>
+            <Label Content="300" HorizontalContentAlignment="Center" FontSize="25" Canvas.Top="161" Width="50" Canvas.Left="29"/>
+            <Label Content="400" HorizontalContentAlignment="Center" FontSize="25" Canvas.Top="76" Width="50" Canvas.Left="29"/>
+            <Rectangle Height="{Binding SelectedMerenje.Entiteti[0].IzmerenaVisinaLinija}" Fill="{Binding SelectedMerenje.Entiteti[0].Boja}" Canvas.Left="120" Canvas.Bottom="62" Width="50"/>
+            <Rectangle Height="{Binding SelectedMerenje.Entiteti[1].IzmerenaVisinaLinija}" Fill="{Binding SelectedMerenje.Entiteti[1].Boja}" Canvas.Left="260" Canvas.Bottom="62" Width="50"/>
+            <Rectangle Height="{Binding SelectedMerenje.Entiteti[2].IzmerenaVisinaLinija}" Fill="{Binding SelectedMerenje.Entiteti[2].Boja}" Canvas.Left="400" Canvas.Bottom="62" Width="50"/>
+            <Rectangle Height="{Binding SelectedMerenje.Entiteti[3].IzmerenaVisinaLinija}" Fill="{Binding SelectedMerenje.Entiteti[3].Boja}" Canvas.Left="540" Canvas.Bottom="62" Width="50"/>
+            <Rectangle Height="{Binding SelectedMerenje.Entiteti[4].IzmerenaVisinaLinija}" Fill="{Binding SelectedMerenje.Entiteti[4].Boja}" Canvas.Left="680" Canvas.Bottom="62" Width="50"/>
+
+            <Label Content="0%" HorizontalContentAlignment="Center" Canvas.Top="563" Width="50" Canvas.Left="230"/>
+            <Label Content="25%" HorizontalContentAlignment="Center" Canvas.Top="563" Width="50" Canvas.Left="300"/>
+            <Label Content="50%" HorizontalContentAlignment="Center" Canvas.Top="563" Width="50" Canvas.Left="370"/>
+            <Label Content="75%" HorizontalContentAlignment="Center" Canvas.Top="563" Width="50" Canvas.Left="440"/>
+            <Label Content="100%" HorizontalContentAlignment="Center" Canvas.Top="563" Width="50" Canvas.Left="510"/>
+
+            <Grid Canvas.Left="252" Canvas.Top="525">
+                <Rectangle Height="30" Fill="Red" Canvas.Left="264" Stroke="LightGray" Canvas.Top="692" Width="{Binding RTD}"/>
+                <TextBlock Text="{Binding RTDString}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+
+            <Grid Canvas.Right="268" Canvas.Top="525">
+                <Rectangle Height="30" Fill="Blue" Canvas.Right="234" Stroke="LightGray" Canvas.Top="692" Width="{Binding TS}"/>
+                <TextBlock Text="{Binding TSString}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>          
+        </Canvas>
+    </Canvas>
+
+    <UserControl.InputBindings>
+        <KeyBinding Command="{Binding ShowGraphCommand}"
+                    Modifiers="Ctrl"
+                    Key="B"/>
+    </UserControl.InputBindings>
+    
+
+</UserControl>

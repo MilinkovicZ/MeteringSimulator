@@ -1,0 +1,79 @@
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\bin\Debug\NetworkService.exe.config
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\bin\Debug\NetworkService.exe
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\bin\Debug\NetworkService.pdb
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\MainWindow.g.cs
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\NetworkEntities.g.cs
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\App.g.cs
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService_MarkupCompile.cache
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService_MarkupCompile.lref
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\MainWindow.baml
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\NetworkEntities.baml
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.g.resources
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.Properties.Resources.resources
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.GenerateResource.cache
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.CoreCompileInputs.cache
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.exe
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.pdb
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\bin\Debug\NetworkService.exe.config
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\bin\Debug\NetworkService.exe
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\bin\Debug\NetworkService.pdb
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\MainWindow.g.cs
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\NetworkEntities.g.cs
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\App.g.cs
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService_MarkupCompile.cache
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService_MarkupCompile.lref
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\MainWindow.baml
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\NetworkEntities.baml
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.g.resources
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.Properties.Resources.resources
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.GenerateResource.cache
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.CoreCompileInputs.cache
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.exe
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.pdb
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\NetworkEntities.g.cs
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\App.g.cs
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService_MarkupCompile.cache
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService_MarkupCompile.lref
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.exe
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.pdb
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\bin\Debug\NetworkService.exe.config
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\bin\Debug\NetworkService.exe
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\bin\Debug\NetworkService.pdb
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\MainWindow.g.cs
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\MainWindow.baml
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\NetworkEntities.baml
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.g.resources
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.Properties.Resources.resources
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.GenerateResource.cache
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.CoreCompileInputs.cache
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\MeasurementGraph.g.cs
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\NetworkDisplay.g.cs
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\MeasurementGraph.baml
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\NetworkDisplay.baml
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.CopyComplete
+C:\Users\Zdravko\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.csprojAssemblyReference.cache
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\MeasurementGraph.g.cs
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\NetworkDisplay.g.cs
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\MeasurementGraph.baml
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\NetworkDisplay.baml
+C:\Users\zdrav\Desktop\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.CopyComplete
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\bin\Debug\Microsoft.Expression.Interactions.dll
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\bin\Debug\System.Windows.Interactivity.dll
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\bin\Debug\Microsoft.Expression.Interactions.xml
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\bin\Debug\System.Windows.Interactivity.xml
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.AssemblyReference.cache
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\MeasurementGraph.g.cs
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\NetworkDisplay.g.cs
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\MeasurementGraph.baml
+D:\Zdravko\Faks\Interakcija covek racunar\HCI Projekat II\NetworkService\NetworkService\obj\Debug\Views\NetworkDisplay.baml

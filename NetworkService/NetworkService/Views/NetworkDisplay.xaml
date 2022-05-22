@@ -1,0 +1,407 @@
+﻿<UserControl x:Class="NetworkService.Views.NetworkDisplay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NetworkService.Views"
+             xmlns:viewModel="clr-namespace:NetworkService.ViewModel"
+             xmlns:model="clr-namespace:NetworkService.Model"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.DataContext>
+        <viewModel:NetworkDisplayViewModel/>
+    </UserControl.DataContext>
+
+    <Grid>
+        <Canvas>
+            <StackPanel Orientation="Horizontal" Canvas.Left="70" Canvas.Top="150">
+                <StackPanel Orientation="Vertical">
+
+                    <Border Width="100" Height="100" Background="GhostWhite">
+                        <Canvas x:Name="canvas0" Height="100" Width="100" Background="{Binding Canvasi[0].Pozadina}" AllowDrop="True" Canvas.Left="30" Canvas.Top="12">
+                            <TextBlock Width="100" Text="{Binding Canvasi[0].Text}" Foreground="{Binding Canvasi[0].Foreground}" Canvas.Left="0" Canvas.Top="87" FontWeight="Bold" Height="35" TextWrapping="Wrap" TextAlignment="Center" Margin="-3" />
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Drop" >
+                                    <i:InvokeCommandAction Command="{Binding DropCommand}" CommandParameter="{Binding ElementName=canvas0}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="dragOver" >
+                                    <i:InvokeCommandAction Command="{Binding DragOverCommand}" CommandParameter="{Binding ElementName=canvas0}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="MouseLeftButtonUp" >
+                                    <i:InvokeCommandAction Command="{Binding MouseLeftButtonUpCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Canvas.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding MouseLeftButtonDownCommand}" CommandParameter="{Binding ElementName=canvas0}"/>
+                            </Canvas.InputBindings>
+                        </Canvas>
+                    </Border>
+                    <Button Command="{Binding ButtonCommand}" CommandParameter="{Binding ElementName=canvas0}" Width="100" Content="Oslobodi"  Margin="0 5" />
+
+                    <Border Width="100" Height="100" Background="GhostWhite">
+                        <Canvas x:Name="canvas1" Height="100" Width="100" Background="{Binding Canvasi[1].Pozadina}" AllowDrop="True" Canvas.Left="30" Canvas.Top="12">
+                            <TextBlock Width="100" Canvas.Left="0" Text="{Binding Canvasi[1].Text}" Canvas.Top="87" FontWeight="Bold" Height="35" Foreground="{Binding Canvasi[1].Foreground}" TextWrapping="Wrap" TextAlignment="Center" Margin="-3" />
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Drop" >
+                                    <i:InvokeCommandAction Command="{Binding DropCommand}" CommandParameter="{Binding ElementName=canvas1}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="dragOver" >
+                                    <i:InvokeCommandAction Command="{Binding DragOverCommand}" CommandParameter="{Binding ElementName=canvas1}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="MouseLeftButtonUp" >
+                                    <i:InvokeCommandAction Command="{Binding MouseLeftButtonUpCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Canvas.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding MouseLeftButtonDownCommand}" CommandParameter="{Binding ElementName=canvas1}"/>
+                            </Canvas.InputBindings>
+                        </Canvas>
+                    </Border>
+                    <Button Command="{Binding ButtonCommand}" CommandParameter="{Binding ElementName=canvas1}" Width="100" Content="Oslobodi"  Margin="0 5" />
+
+                    <Border Width="100" Height="100" Background="GhostWhite">
+                        <Canvas x:Name="canvas2" Height="100" Width="100" Background="{Binding Canvasi[2].Pozadina}" AllowDrop="True" Canvas.Left="30" Canvas.Top="12">
+                            <TextBlock Width="100" Canvas.Left="0" Text="{Binding Canvasi[2].Text}" Canvas.Top="87" FontWeight="Bold" Height="35" Foreground="{Binding Canvasi[2].Foreground}"  TextWrapping="Wrap" TextAlignment="Center" Margin="-3" />
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Drop" >
+                                    <i:InvokeCommandAction Command="{Binding DropCommand}" CommandParameter="{Binding ElementName=canvas2}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="dragOver" >
+                                    <i:InvokeCommandAction Command="{Binding DragOverCommand}" CommandParameter="{Binding ElementName=canvas2}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="MouseLeftButtonUp" >
+                                    <i:InvokeCommandAction Command="{Binding MouseLeftButtonUpCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Canvas.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding MouseLeftButtonDownCommand}" CommandParameter="{Binding ElementName=canvas2}"/>
+                            </Canvas.InputBindings>
+                        </Canvas>
+                    </Border>
+                    <Button Command="{Binding ButtonCommand}" CommandParameter="{Binding ElementName=canvas2}" Width="100" Content="Oslobodi"  Margin="0 5" />
+
+                    <Border Width="100" Height="100" Background="GhostWhite">
+                        <Canvas x:Name="canvas3" Height="100" Width="100" Background="{Binding Canvasi[3].Pozadina}" AllowDrop="True" Canvas.Left="30" Canvas.Top="12">
+                            <TextBlock Width="100" Canvas.Left="0" Text="{Binding Canvasi[3].Text}" Canvas.Top="87" FontWeight="Bold" Height="35" Foreground="{Binding Canvasi[3].Foreground}"  TextWrapping="Wrap" TextAlignment="Center" Margin="-3" />
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Drop" >
+                                    <i:InvokeCommandAction Command="{Binding DropCommand}" CommandParameter="{Binding ElementName=canvas3}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="dragOver" >
+                                    <i:InvokeCommandAction Command="{Binding DragOverCommand}" CommandParameter="{Binding ElementName=canvas3}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="MouseLeftButtonUp" >
+                                    <i:InvokeCommandAction Command="{Binding MouseLeftButtonUpCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Canvas.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding MouseLeftButtonDownCommand}" CommandParameter="{Binding ElementName=canvas3}"/>
+                            </Canvas.InputBindings>
+                        </Canvas>
+                    </Border>
+                    <Button Command="{Binding ButtonCommand}" CommandParameter="{Binding ElementName=canvas3}" Width="100" Content="Oslobodi"  Margin="0 5" />
+
+                </StackPanel>
+
+                <Separator Margin="5"/>
+
+                <StackPanel Orientation="Vertical">
+
+                    <Border Width="100" Height="100" Background="GhostWhite">
+                        <Canvas x:Name="canvas4" Height="100" Width="100" Background="{Binding Canvasi[4].Pozadina}" AllowDrop="True" Canvas.Left="30" Canvas.Top="12">
+                            <TextBlock Width="100" Canvas.Left="0" Text="{Binding Canvasi[4].Text}" Canvas.Top="87" FontWeight="Bold" Height="35" Foreground="{Binding Canvasi[4].Foreground}"  TextWrapping="Wrap" TextAlignment="Center" Margin="-3" />
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Drop" >
+                                    <i:InvokeCommandAction Command="{Binding DropCommand}" CommandParameter="{Binding ElementName=canvas4}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="dragOver" >
+                                    <i:InvokeCommandAction Command="{Binding DragOverCommand}" CommandParameter="{Binding ElementName=canvas4}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="MouseLeftButtonUp" >
+                                    <i:InvokeCommandAction Command="{Binding MouseLeftButtonUpCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Canvas.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding MouseLeftButtonDownCommand}" CommandParameter="{Binding ElementName=canvas4}"/>
+                            </Canvas.InputBindings>
+                        </Canvas>
+                    </Border>
+                    <Button Command="{Binding ButtonCommand}" CommandParameter="{Binding ElementName=canvas4}" Width="100" Content="Oslobodi"  Margin="0 5" />
+
+                    <Border Width="100" Height="100" Background="GhostWhite">
+                        <Canvas x:Name="canvas5" Height="100" Width="100" Background="{Binding Canvasi[5].Pozadina}" AllowDrop="True" Canvas.Left="30" Canvas.Top="12">
+                            <TextBlock Width="100" Canvas.Left="0" Text="{Binding Canvasi[5].Text}" Canvas.Top="87" FontWeight="Bold" Height="35" Foreground="{Binding Canvasi[5].Foreground}"  TextWrapping="Wrap" TextAlignment="Center" Margin="-3" />
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Drop" >
+                                    <i:InvokeCommandAction Command="{Binding DropCommand}" CommandParameter="{Binding ElementName=canvas5}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="dragOver" >
+                                    <i:InvokeCommandAction Command="{Binding DragOverCommand}" CommandParameter="{Binding ElementName=canvas5}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="MouseLeftButtonUp" >
+                                    <i:InvokeCommandAction Command="{Binding MouseLeftButtonUpCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Canvas.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding MouseLeftButtonDownCommand}" CommandParameter="{Binding ElementName=canvas5}"/>
+                            </Canvas.InputBindings>
+                        </Canvas>
+                    </Border>
+                    <Button Command="{Binding ButtonCommand}" CommandParameter="{Binding ElementName=canvas5}" Width="100" Content="Oslobodi"  Margin="0 5" />
+
+                    <Border Width="100" Height="100" Background="GhostWhite">
+                        <Canvas x:Name="canvas6" Height="100" Width="100" Background="{Binding Canvasi[6].Pozadina}" AllowDrop="True" Canvas.Left="30" Canvas.Top="12">
+                            <TextBlock Width="100" Canvas.Left="0" Text="{Binding Canvasi[6].Text}" Canvas.Top="87" FontWeight="Bold" Height="35" Foreground="{Binding Canvasi[6].Foreground}" TextWrapping="Wrap" TextAlignment="Center" Margin="-3" />
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Drop" >
+                                    <i:InvokeCommandAction Command="{Binding DropCommand}" CommandParameter="{Binding ElementName=canvas6}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="dragOver" >
+                                    <i:InvokeCommandAction Command="{Binding DragOverCommand}" CommandParameter="{Binding ElementName=canvas6}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="MouseLeftButtonUp" >
+                                    <i:InvokeCommandAction Command="{Binding MouseLeftButtonUpCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Canvas.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding MouseLeftButtonDownCommand}" CommandParameter="{Binding ElementName=canvas6}"/>
+                            </Canvas.InputBindings>
+                        </Canvas>
+                    </Border>
+                    <Button Command="{Binding ButtonCommand}" CommandParameter="{Binding ElementName=canvas6}" Width="100" Content="Oslobodi"  Margin="0 5" />
+
+                    <Border Width="100" Height="100" Background="GhostWhite">
+                        <Canvas x:Name="canvas7" Height="100" Width="100" Background="{Binding Canvasi[7].Pozadina}" AllowDrop="True" Canvas.Left="30" Canvas.Top="12">
+                            <TextBlock Width="100" Canvas.Left="0" Text="{Binding Canvasi[7].Text}" Canvas.Top="87" FontWeight="Bold" Height="35" Foreground="{Binding Canvasi[7].Foreground}" TextWrapping="Wrap" TextAlignment="Center" Margin="-3" />
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Drop" >
+                                    <i:InvokeCommandAction Command="{Binding DropCommand}" CommandParameter="{Binding ElementName=canvas7}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="dragOver" >
+                                    <i:InvokeCommandAction Command="{Binding DragOverCommand}" CommandParameter="{Binding ElementName=canvas7}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="MouseLeftButtonUp" >
+                                    <i:InvokeCommandAction Command="{Binding MouseLeftButtonUpCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Canvas.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding MouseLeftButtonDownCommand}" CommandParameter="{Binding ElementName=canvas7}"/>
+                            </Canvas.InputBindings>
+                        </Canvas>
+                    </Border>
+                    <Button Command="{Binding ButtonCommand}" CommandParameter="{Binding ElementName=canvas7}" Width="100" Content="Oslobodi"  Margin="0 5" />
+
+                </StackPanel>
+
+                <Separator Margin="5"/>
+
+                <StackPanel Orientation="Vertical">
+
+                    <Border Width="100" Height="100" Background="GhostWhite">
+                        <Canvas x:Name="canvas8" Height="100" Width="100" Background="{Binding Canvasi[8].Pozadina}" AllowDrop="True" Canvas.Left="30" Canvas.Top="12">
+                            <TextBlock Width="100" Canvas.Left="0" Text="{Binding Canvasi[8].Text}" Canvas.Top="87" FontWeight="Bold" Height="35" Foreground="{Binding Canvasi[8].Foreground}" TextWrapping="Wrap" TextAlignment="Center" Margin="-3" />
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Drop" >
+                                    <i:InvokeCommandAction Command="{Binding DropCommand}" CommandParameter="{Binding ElementName=canvas8}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="dragOver" >
+                                    <i:InvokeCommandAction Command="{Binding DragOverCommand}" CommandParameter="{Binding ElementName=canvas8}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="MouseLeftButtonUp" >
+                                    <i:InvokeCommandAction Command="{Binding MouseLeftButtonUpCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Canvas.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding MouseLeftButtonDownCommand}" CommandParameter="{Binding ElementName=canvas8}"/>
+                            </Canvas.InputBindings>
+                        </Canvas>
+                    </Border>
+                    <Button Command="{Binding ButtonCommand}" CommandParameter="{Binding ElementName=canvas8}" Width="100" Content="Oslobodi"  Margin="0 5" />
+
+                    <Border Width="100" Height="100" Background="GhostWhite">
+                        <Canvas x:Name="canvas9" Height="100" Width="100" Background="{Binding Canvasi[9].Pozadina}" AllowDrop="True" Canvas.Left="30" Canvas.Top="12">
+                            <TextBlock Width="100" Canvas.Left="0" Text="{Binding Canvasi[9].Text}" Canvas.Top="87" FontWeight="Bold" Height="35" Foreground="{Binding Canvasi[9].Foreground}" TextWrapping="Wrap" TextAlignment="Center" Margin="-3" />
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Drop" >
+                                    <i:InvokeCommandAction Command="{Binding DropCommand}" CommandParameter="{Binding ElementName=canvas9}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="dragOver" >
+                                    <i:InvokeCommandAction Command="{Binding DragOverCommand}" CommandParameter="{Binding ElementName=canvas9}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="MouseLeftButtonUp" >
+                                    <i:InvokeCommandAction Command="{Binding MouseLeftButtonUpCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Canvas.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding MouseLeftButtonDownCommand}" CommandParameter="{Binding ElementName=canvas9}"/>
+                            </Canvas.InputBindings>
+                        </Canvas>
+                    </Border>
+                    <Button Command="{Binding ButtonCommand}" CommandParameter="{Binding ElementName=canvas9}" Width="100" Content="Oslobodi"  Margin="0 5" />
+
+                    <Border Width="100" Height="100" Background="GhostWhite">
+                        <Canvas x:Name="canvas10" Height="100" Width="100" Background="{Binding Canvasi[10].Pozadina}" AllowDrop="True" Canvas.Left="30" Canvas.Top="12">
+                            <TextBlock Width="100" Canvas.Left="0" Text="{Binding Canvasi[10].Text}" Canvas.Top="87" FontWeight="Bold" Height="35" Foreground="{Binding Canvasi[10].Foreground}" TextWrapping="Wrap" TextAlignment="Center" Margin="-3" />
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Drop" >
+                                    <i:InvokeCommandAction Command="{Binding DropCommand}" CommandParameter="{Binding ElementName=canvas10}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="dragOver" >
+                                    <i:InvokeCommandAction Command="{Binding DragOverCommand}" CommandParameter="{Binding ElementName=canvas10}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="MouseLeftButtonUp" >
+                                    <i:InvokeCommandAction Command="{Binding MouseLeftButtonUpCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Canvas.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding MouseLeftButtonDownCommand}" CommandParameter="{Binding ElementName=canvas10}"/>
+                            </Canvas.InputBindings>
+                        </Canvas>
+                    </Border>
+                    <Button Command="{Binding ButtonCommand}" CommandParameter="{Binding ElementName=canvas10}" Width="100" Content="Oslobodi"  Margin="0 5" />
+
+                    <Border Width="100" Height="100" Background="GhostWhite">
+                        <Canvas x:Name="canvas11" Height="100" Width="100" Background="{Binding Canvasi[11].Pozadina}" AllowDrop="True" Canvas.Left="30" Canvas.Top="12">
+                            <TextBlock Width="100" Canvas.Left="0" Text="{Binding Canvasi[11].Text}" Canvas.Top="87" FontWeight="Bold" Height="35" Foreground="{Binding Canvasi[11].Foreground}" TextWrapping="Wrap" TextAlignment="Center" Margin="-3" />
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Drop" >
+                                    <i:InvokeCommandAction Command="{Binding DropCommand}" CommandParameter="{Binding ElementName=canvas11}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="dragOver" >
+                                    <i:InvokeCommandAction Command="{Binding DragOverCommand}" CommandParameter="{Binding ElementName=canvas11}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="MouseLeftButtonUp" >
+                                    <i:InvokeCommandAction Command="{Binding MouseLeftButtonUpCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Canvas.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding MouseLeftButtonDownCommand}" CommandParameter="{Binding ElementName=canvas11}"/>
+                            </Canvas.InputBindings>
+                        </Canvas>
+                    </Border>
+                    <Button Command="{Binding ButtonCommand}" CommandParameter="{Binding ElementName=canvas11}" Width="100" Content="Oslobodi"  Margin="0 5" />
+
+                </StackPanel>
+
+                <Separator Margin="5"/>
+
+                <StackPanel Orientation="Vertical">
+
+                    <Border Width="100" Height="100" Background="GhostWhite">
+                        <Canvas x:Name="canvas12" Height="100" Width="100" Background="{Binding Canvasi[12].Pozadina}" AllowDrop="True" Canvas.Left="30" Canvas.Top="12">
+                            <TextBlock Width="100" Canvas.Left="0" Text="{Binding Canvasi[12].Text}" Canvas.Top="87" FontWeight="Bold" Foreground="{Binding Canvasi[12].Foreground}" TextWrapping="Wrap" TextAlignment="Center" Margin="-3" />
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Drop" >
+                                    <i:InvokeCommandAction Command="{Binding DropCommand}" CommandParameter="{Binding ElementName=canvas12}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="dragOver" >
+                                    <i:InvokeCommandAction Command="{Binding DragOverCommand}" CommandParameter="{Binding ElementName=canvas12}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="MouseLeftButtonUp" >
+                                    <i:InvokeCommandAction Command="{Binding MouseLeftButtonUpCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Canvas.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding MouseLeftButtonDownCommand}" CommandParameter="{Binding ElementName=canvas12}"/>
+                            </Canvas.InputBindings>
+                        </Canvas>
+                    </Border>
+                    <Button Command="{Binding ButtonCommand}" CommandParameter="{Binding ElementName=canvas12}" Width="100" Content="Oslobodi"  Margin="0 5" />
+
+                    <Border Width="100" Height="100" Background="GhostWhite">
+                        <Canvas x:Name="canvas13" Height="100" Width="100" Background="{Binding Canvasi[13].Pozadina}" AllowDrop="True" Canvas.Left="30" Canvas.Top="12">
+                            <TextBlock Width="100" Canvas.Left="0" Text="{Binding Canvasi[13].Text}" Canvas.Top="87" FontWeight="Bold" Height="35" Foreground="{Binding Canvasi[13].Foreground}" TextWrapping="Wrap" TextAlignment="Center" Margin="-3" />
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Drop" >
+                                    <i:InvokeCommandAction Command="{Binding DropCommand}" CommandParameter="{Binding ElementName=canvas13}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="dragOver" >
+                                    <i:InvokeCommandAction Command="{Binding DragOverCommand}" CommandParameter="{Binding ElementName=canvas13}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="MouseLeftButtonUp" >
+                                    <i:InvokeCommandAction Command="{Binding MouseLeftButtonUpCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Canvas.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding MouseLeftButtonDownCommand}" CommandParameter="{Binding ElementName=canvas13}"/>
+                            </Canvas.InputBindings>
+                        </Canvas>
+                    </Border>
+                    <Button Command="{Binding ButtonCommand}" CommandParameter="{Binding ElementName=canvas13}" Width="100" Content="Oslobodi"  Margin="0 5" />
+
+                    <Border Width="100" Height="100" Background="GhostWhite">
+                        <Canvas x:Name="canvas14" Height="100" Width="100" Background="{Binding Canvasi[14].Pozadina}" AllowDrop="True" Canvas.Left="30" Canvas.Top="12">
+                            <TextBlock Width="100" Canvas.Left="0" Text="{Binding Canvasi[14].Text}" Canvas.Top="87" FontWeight="Bold" Height="35" Foreground="{Binding Canvasi[14].Foreground}" TextWrapping="Wrap" TextAlignment="Center" Margin="-3" />
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Drop" >
+                                    <i:InvokeCommandAction Command="{Binding DropCommand}" CommandParameter="{Binding ElementName=canvas14}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="dragOver" >
+                                    <i:InvokeCommandAction Command="{Binding DragOverCommand}" CommandParameter="{Binding ElementName=canvas14}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="MouseLeftButtonUp" >
+                                    <i:InvokeCommandAction Command="{Binding MouseLeftButtonUpCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Canvas.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding MouseLeftButtonDownCommand}" CommandParameter="{Binding ElementName=canvas14}"/>
+                            </Canvas.InputBindings>
+                        </Canvas>
+                    </Border>
+                    <Button Command="{Binding ButtonCommand}" CommandParameter="{Binding ElementName=canvas14}" Width="100" Content="Oslobodi"  Margin="0 5" />
+
+                    <Border Width="100" Height="100" Background="GhostWhite">
+                        <Canvas x:Name="canvas15" Height="100" Width="100" Background="{Binding Canvasi[15].Pozadina}" AllowDrop="True" Canvas.Left="30" Canvas.Top="12">
+                            <TextBlock Width="100" Canvas.Left="0" Text="{Binding Canvasi[15].Text}" Canvas.Top="87" FontWeight="Bold" Height="35" Foreground="{Binding Canvasi[15].Foreground}" TextWrapping="Wrap" TextAlignment="Center" Margin="-3" />
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Drop" >
+                                    <i:InvokeCommandAction Command="{Binding DropCommand}" CommandParameter="{Binding ElementName=canvas15}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="dragOver" >
+                                    <i:InvokeCommandAction Command="{Binding DragOverCommand}" CommandParameter="{Binding ElementName=canvas15}" />
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="MouseLeftButtonUp" >
+                                    <i:InvokeCommandAction Command="{Binding MouseLeftButtonUpCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <Canvas.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding MouseLeftButtonDownCommand}" CommandParameter="{Binding ElementName=canvas15}"/>
+                            </Canvas.InputBindings>
+                        </Canvas>
+                    </Border>
+                    <Button Command="{Binding ButtonCommand}" CommandParameter="{Binding ElementName=canvas15}" Width="100" Content="Oslobodi"  Margin="0 5" />
+
+                </StackPanel>
+
+                <Separator Margin="10"/>
+                <ListView Width="150" x:Name="listaObjekata" Margin="15 0 15 0" ItemsSource="{Binding listaTemperatura}" SelectedItem="{Binding SelectedTemperatura}">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged" >
+                            <i:InvokeCommandAction Command="{Binding SelectionChangedCommand}" CommandParameter="{Binding ElementName=listaObjekata}" />
+                        </i:EventTrigger>
+                        <i:EventTrigger EventName="MouseLeftButtonUp" >
+                            <i:InvokeCommandAction Command="{Binding MouseLeftButtonUpCommand}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </ListView>
+
+            </StackPanel>
+            <Label Content="Network Display" FontSize="30" FontWeight="Bold" Canvas.Left="165" Canvas.Top="48"/>
+
+            <ItemsControl x:Name="ic" ItemsSource="{Binding LinijeCanvasa}" Canvas.Left="10" Canvas.Top="110">
+                <ItemsControl.Resources>
+                    <DataTemplate DataType="{x:Type model:Linija}">
+                        <Line X1="{Binding X1}" X2="{Binding X2}" Y1="{Binding Y1}" Y2="{Binding Y2}" StrokeThickness="3" Stroke="Red"/>
+                    </DataTemplate>
+                </ItemsControl.Resources>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </Canvas>
+    </Grid>
+</UserControl>

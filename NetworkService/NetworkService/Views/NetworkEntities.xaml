@@ -1,0 +1,91 @@
+﻿<UserControl x:Class="NetworkService.Views.NetworkEntities"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NetworkService.Views"
+             xmlns:viewModel="clr-namespace:NetworkService.ViewModel"
+             xmlns:data="clr-namespace:NetworkService.Model"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.DataContext>
+        <viewModel:NetworkEntitiesViewModel/>
+    </UserControl.DataContext>
+
+
+    <Canvas Background="White" Margin="0,0,-142,-149.4">
+        <Canvas Canvas.Top="80" Canvas.Left="80">
+            <DataGrid ItemsSource="{Binding Filter}" SelectionMode="Single" SelectedItem="{Binding Selected}" TextBlock.TextAlignment="Center" CanUserResizeColumns="False" CanUserReorderColumns="False" IsReadOnly="True" AutoGenerateColumns="False" Height="218" Width="790" Canvas.Top="125" Canvas.Left="4">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="60"/>
+                    <DataGridTextColumn Header="Naziv" Binding="{Binding Naziv}" Width="120"/>
+                    <DataGridTextColumn Header="Tip" Binding="{Binding Tip.ImeTipa}" Width="120"/>
+                    <DataGridTextColumn Header="Vrednost" Binding="{Binding Temperatura, Mode=TwoWay}" Width="80"/>
+                    <DataGridTextColumn Header="" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Label Content="ID" Width="44" Canvas.Top="354" Canvas.Left="4" Height="25"/>
+            <TextBox Text="{Binding Temp.Id}" Width="50" Canvas.Left="87" Canvas.Top="358"/>
+            <TextBlock Text="{Binding Temp.ValidationErrors[Id]}" Foreground="Red" Canvas.Left="142" Canvas.Top="360"/>
+
+            <Label Content="Naziv" Canvas.Top="384" Canvas.Left="4" Height="26" Width="44"/>
+            <TextBox Text="{Binding Temp.Naziv}" Width="50" Canvas.Left="87" Canvas.Top="388"/>
+            <TextBlock Text="{Binding Temp.ValidationErrors[Naziv]}" Foreground="Red" Canvas.Left="142" Canvas.Top="389"/>
+            <TextBlock Text="{Binding DuplicateIdError}" Foreground="Red" Canvas.Left="87" Canvas.Top="410"/>
+
+            <Label Content="Tip" Canvas.Left="4" Canvas.Top="425" Width="44"/>
+            <ComboBox x:Name="cmbTip" DisplayMemberPath="ImeTipa" SelectedIndex="0" IsEditable="False" ItemsSource="{Binding Tipovi}" Width="110" SelectedValue="{Binding Temp.Tip}" Canvas.Left="87" Canvas.Top="428"/>
+            <Image Source="{Binding Temp.Tip.IzvorSlike}" Width="129" HorizontalAlignment="Center" Height="81" Canvas.Top="358" Canvas.Left="434"/>
+
+            <Button Content="Add"
+                        HorizontalAlignment="Center"
+                        Width="60"
+                        Command="{Binding AddCommand}" RenderTransformOrigin="3.302,-1.681" Canvas.Left="288" Canvas.Top="360"/>
+
+            <Button Content="Delete"
+                        HorizontalAlignment="Center"
+                        Width="60"
+                        Command="{Binding DeleteCommand}" Canvas.Left="288" Canvas.Top="391"/>
+
+            <!--FILTRACIJA-->
+
+            <Label Content="Type" Canvas.Left="29" Canvas.Top="25" Height="26" Width="36"/>
+            <Label Content="ID" Canvas.Left="29" Canvas.Top="56" Width="36"/>
+            <ComboBox x:Name="cbFilter" IsEditable="False" ItemsSource="{Binding Tipovi}" DisplayMemberPath="ImeTipa" SelectedValue="{Binding FilterT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Left="87" Canvas.Top="25" Width="110" Height="26" SelectionChanged="CbFilter_SelectionChanged" />
+            <TextBox x:Name="tbFilter" Text="{Binding FilterID, Mode=TwoWay}" Width="110" Canvas.Left="87" Canvas.Top="56" Height="26"/>
+            <Button x:Name="btClear" Command="{Binding FilterCommand}" HorizontalAlignment="Center" Content="Filter" Height="26" Width="70" Canvas.Left="283" Canvas.Top="24"/>
+            <Button x:Name="btFilter" Command="{Binding ClearFilterCommand}" HorizontalAlignment="Center" Content="Clear" Height="26" Width="70" Canvas.Left="283" Canvas.Top="60"/>
+            <RadioButton Content="&gt;" IsChecked="{Binding FilterV, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="rbMore" Canvas.Left="239" Canvas.Top="31" Height="15" Width="29"/>
+            <RadioButton Content="&lt;" IsChecked="{Binding FilterM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="rbLess" Canvas.Left="239" Canvas.Top="62"/>
+
+            <!--FILTRACIJA EXTENDED-->
+
+            <Grid>
+                <RadioButton Content="Nevalidne Vrednosti" IsChecked="{Binding FilterOutOfRange, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Left" Canvas.Left="407" Canvas.Top="30" Width="130" Margin="383,64,-383.4,-52.6"/>
+                <RadioButton Content="Validne Vrednosti" IsChecked="{Binding FilterInRange, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Left"  Canvas.Left="407" Canvas.Top="62" Width="130" Margin="383,29,-383.4,-18.6"/>
+            </Grid>
+        </Canvas>
+        <Label Content="Network Entities" FontSize="30" FontWeight="Bold" Canvas.Left="316" Canvas.Top="30"/>
+    </Canvas>
+
+    <UserControl.InputBindings>
+        <KeyBinding Command="{Binding FilterCommand}"
+                    Modifiers="Ctrl"
+                    Key="F"/>
+        <KeyBinding Command="{Binding ClearFilterCommand}"
+                    Modifiers="Ctrl"
+                    Key="G"/>
+        <KeyBinding Command="{Binding DeleteCommand}"
+                    Modifiers="Ctrl"
+                    Key="D"/>
+        <KeyBinding Command="{Binding AddCommand}"
+                    Modifiers="Ctrl"
+                    Key="P"/>
+        <KeyBinding Command="{Binding UndoCommand}"
+                    Modifiers="Ctrl"
+                    Key="Z"/>
+    </UserControl.InputBindings>
+    
+</UserControl>
